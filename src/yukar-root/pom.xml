@@ -6,6 +6,19 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>yukar-root</name>
-  <url>https://github.com/aynu/yukar/yukar-root</url>
-  <description>yukar root project</description>
+  <url>https://github.com/aynu/yukar</url>
+  <description>Yukar Root</description>
+  <organization>
+  	<name>Aynu</name>
+  	<url>https://github.com/aynu</url>
+  </organization>
+  <issueManagement>
+  	<system>GitHub Issues</system>
+  	<url>https://github.com/aynu/yukar/issues</url>
+  </issueManagement>
+  <scm>
+  	<url>https://github.com/aynu/yukar</url>
+  	<connection>scm:git:git://github.com/aynu/yukar.git</connection>
+  	<developerConnection>scm:git:git@github.com:aynu/yukar.git</developerConnection>
+  </scm>
 </project>
