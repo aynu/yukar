@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.aynu</groupId>
+	<artifactId>yukar-coding</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>yukar-coding</name>
+	<description>Yukar Coding</description>
+	<url>https://github.com/aynu/yukar</url>
+	<organization>
+		<name>Aynu</name>
+		<url>https://github.com/aynu</url>
+	</organization>
+	<scm>
+		<connection>scm:git:git://github.com/aynu/yukar.git</connection>
+		<developerConnection>scm:git:git@github.com:aynu/yukar.git</developerConnection>
+		<url>https://github.com/aynu/yukar</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/aynu/yukar/issues</url>
+	</issueManagement>
+	<properties>
+	</properties>
+</project>
