@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -60,7 +60,7 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.3</version>
+				<version>3.3.2</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-codec</groupId>
@@ -75,7 +75,7 @@
 			<dependency>
 				<groupId>commons-beanutils</groupId>
 				<artifactId>commons-beanutils</artifactId>
-				<version>1.9.1</version>
+				<version>1.9.2</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -151,6 +151,12 @@
 				<version>2.0-rc1</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<!-- Aynu Project -->
+			<dependency>
+				<groupId>com.github.aynu</groupId>
+				<artifactId>yukar-testing</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -263,7 +269,7 @@
 					<artifactId>maven-source-plugin</artifactId>
 					<version>2.3</version>
 				</plugin>
-				<!-- Reporting  -->
+				<!-- Reporting -->
 				<plugin>
 					<artifactId>maven-changelog-plugin</artifactId>
 					<version>2.3</version>
