@@ -4,30 +4,27 @@
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
 package com.github.aynu.yukar.framework;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.*;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import org.junit.Test;
 /**
- * セキュリティヘルパー
- * <dl>
- * <dt>使用条件
- * <dd>セキュリティ関連の操作に使用すること。
- * </dl>
+ * @see SecurityHelper
  * @author nilcy
  */
-public final class SecurityHelper {
-    /** 非公開コンストラクタ */
-    private SecurityHelper() {
-    }
+@SuppressWarnings({ "static-method", "boxing" })
+public class SecurityHelperTest {
     /**
-     * 乱数生成器の取得
-     * <dl>
-     * <dt>使用条件
-     * <dd>乱数生成器を取得するときに使用すること。
-     * </dl>
-     * @return 最大強度の乱数生成器
      * @throws NoSuchAlgorithmException 該当アルゴリズムなし例外
+     * @see SecurityHelper#getSecureRandom()
      */
-    public static SecureRandom getSecureRandom() throws NoSuchAlgorithmException {
-        return SecureRandom.getInstanceStrong();
+    @Test
+    public void testSecureRandom() throws NoSuchAlgorithmException {
+        final SecureRandom testee = SecurityHelper.getSecureRandom();
+        assertThat(testee, is(not(nullValue())));
+        for (int i = 0; i < 1000; ++i) {
+            assertThat(testee.nextDouble(), is(closeTo(0, 1.0)));
+        }
     }
 }
