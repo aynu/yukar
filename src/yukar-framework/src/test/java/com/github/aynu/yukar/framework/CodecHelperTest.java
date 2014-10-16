@@ -50,4 +50,16 @@ public class CodecHelperTest {
         assertThat(CodecHelper.crypt(testee, sha256), is(CodecHelper.crypt(testee, sha256)));
         assertThat(CodecHelper.crypt(testee, sha256), is(not(CodecHelper.crypt(testee, sha512))));
     }
+    /**
+     * @see CodecHelper#crypt(String)
+     * @see CodecHelper#crypt(String, String)
+     */
+    @Test
+    public void testSha() {
+        final String testee = "foo";
+        assertThat(CodecHelper.sha1(testee.getBytes()), is(not(nullValue())));
+        assertThat(CodecHelper.sha256(testee.getBytes()), is(not(nullValue())));
+        assertThat(CodecHelper.sha384(testee.getBytes()), is(not(nullValue())));
+        assertThat(CodecHelper.sha512(testee.getBytes()), is(not(nullValue())));
+    }
 }
