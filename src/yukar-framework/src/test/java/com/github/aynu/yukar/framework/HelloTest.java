@@ -14,11 +14,9 @@ import com.github.aynu.yukar.testing.CoverageHelper;
  */
 @SuppressWarnings("static-method")
 public class HelloTest {
-    /**
-     * @see Hello#sayHello(String)
-     */
+    /** @see Hello#sayHello(String) */
     @Test
-    public void test() {
+    public void testSayHello() {
         CoverageHelper.privateConstructor(Hello.class);
         assertThat(Hello.sayHello("nilcy"), is("こんにちは nilcy さん。"));
     }

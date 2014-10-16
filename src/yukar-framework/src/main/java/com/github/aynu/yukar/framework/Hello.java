@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 package com.github.aynu.yukar.framework;
 /**
- * サンプルクラス
+ * 挨拶
  * @author nilcy
  */
 public final class Hello {
@@ -13,7 +13,7 @@ public final class Hello {
     private Hello() {
     }
     /**
-     * サンプルメソッド
+     * 挨拶する
      * @param name 名前
      * @return こんにちは %s さん。
      */
