@@ -9,6 +9,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Logger;
 /**
  * カバレッジヘルパー
+ * <dl>
+ * <dt>使用条件
+ * <dd>カバレッジ関連の操作に使用すること。
+ * </dl>
  * @author nilcy
  */
 public final class CoverageHelper {

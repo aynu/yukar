@@ -10,6 +10,10 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ArchivePath;
 /**
  * アーカイブヘルパー
+ * <dl>
+ * <dt>使用条件
+ * <dd>インテグレーションテスト(Arquillian)のアーカイブ操作に使用すること。
+ * </dl>
  * @author nilcy
  */
 public final class ArchiveHelper {
@@ -20,6 +24,10 @@ public final class ArchiveHelper {
     }
     /**
      * アーカイブのトレース
+     * <dl>
+     * <dt>使用条件
+     * <dd>アーカイブ中のパスをログ出力するために使用すること。
+     * </dl>
      * @param archive アーカイブ
      */
     public static void trace(final Archive<?> archive) {
