@@ -39,4 +39,6 @@
 			<artifactId>jax-rs-ri</artifactId>
 		</dependency>
 	</dependencies>
+	<name>Yukar Testing</name>
+	<description>Yukar Testing Module</description>
 </project>
