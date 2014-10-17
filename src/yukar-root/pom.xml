@@ -125,6 +125,11 @@
 				<version>1.0.1.Final</version>
 			</dependency>
 			<dependency>
+				<groupId>org.wildfly</groupId>
+				<artifactId>wildfly-arquillian-container-remote</artifactId>
+				<version>8.1.0.Final</version>
+			</dependency>
+			<dependency>
 				<groupId>org.jboss.arquillian.container</groupId>
 				<artifactId>arquillian-glassfish-embedded-3.1</artifactId>
 				<version>1.0.0.CR4</version>
