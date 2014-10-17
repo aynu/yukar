@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Copyright (C) Kuzumeji Evolution Laboratory. All rights reserved.
+// Copyright (C) Yukar Evolution Laboratory. All rights reserved.
 // GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
  * @author nilcy
  */
 public abstract class AbstractValueObject<T extends ValueObject<T>> extends AbstractDataObject<T>
-    implements ValueObject<T> {
+implements ValueObject<T> {
     /** 識別番号 */
     private static final long serialVersionUID = -8215359956960310982L;
     /** 一時項目の検査 */

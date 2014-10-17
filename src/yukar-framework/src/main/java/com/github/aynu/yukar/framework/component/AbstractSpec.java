@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Copyright (C) Kuzumeji Evolution Laboratory. All rights reserved.
+// Copyright (C) Yukar Evolution Laboratory. All rights reserved.
 // GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
@@ -98,8 +98,8 @@ public abstract class AbstractSpec<T> implements Spec<T> {
             /** {@inheritDoc} */
             @Override
             public boolean isSatisfiedBy(final T object) {
-                return getSpec1().isSatisfiedBy(object) && !getSpec2().isSatisfiedBy(object)
-                    || !getSpec1().isSatisfiedBy(object) && getSpec2().isSatisfiedBy(object);
+                return (getSpec1().isSatisfiedBy(object) && !getSpec2().isSatisfiedBy(object))
+                    || (!getSpec1().isSatisfiedBy(object) && getSpec2().isSatisfiedBy(object));
             }
         };
     }

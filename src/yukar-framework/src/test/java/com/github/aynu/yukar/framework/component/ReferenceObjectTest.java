@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Copyright (C) Kuzumeji Evolution Laboratory. All rights reserved.
+// Copyright (C) Yukar Evolution Laboratory. All rights reserved.
 // GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
@@ -8,7 +8,6 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.junit.Test;
-import com.github.aynu.yukar.framework.component.ReferenceObject;
 /**
  * @see ReferenceObject
  * @author shimokawa4955
