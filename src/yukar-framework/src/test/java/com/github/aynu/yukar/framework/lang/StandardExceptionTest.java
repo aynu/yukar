@@ -3,13 +3,13 @@
 // GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
-package com.github.aynu.yukar.framework.core;
+package com.github.aynu.yukar.framework.lang;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import org.junit.Test;
-import com.github.aynu.yukar.framework.core.StandardException;
+import com.github.aynu.yukar.framework.lang.StandardException;
 /**
  * @see StandardException
  * @author nilcy

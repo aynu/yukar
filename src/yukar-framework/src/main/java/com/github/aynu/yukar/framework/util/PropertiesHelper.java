@@ -15,7 +15,7 @@ import org.apache.commons.lang.Validate;
 import org.apache.commons.lang3.SystemUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.github.aynu.yukar.framework.core.StandardRuntimeException;
+import com.github.aynu.yukar.framework.lang.StandardRuntimeException;
 /**
  * プロパティヘルパー
  * @author nilcy

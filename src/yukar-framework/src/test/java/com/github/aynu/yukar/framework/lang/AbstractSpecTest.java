@@ -3,14 +3,14 @@
 // GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
-package com.github.aynu.yukar.framework.core;
-import static com.github.aynu.yukar.framework.core.SpecHelper.*;
+package com.github.aynu.yukar.framework.lang;
+import static com.github.aynu.yukar.framework.lang.SpecHelper.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import com.github.aynu.yukar.framework.core.AbstractSpec;
-import com.github.aynu.yukar.framework.core.Spec;
-import com.github.aynu.yukar.framework.core.SpecHelper;
+import com.github.aynu.yukar.framework.lang.AbstractSpec;
+import com.github.aynu.yukar.framework.lang.Spec;
+import com.github.aynu.yukar.framework.lang.SpecHelper;
 import com.github.aynu.yukar.testing.CoverageHelper;
 /**
  * @see AbstractSpec

@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 import java.awt.Dimension;
 import org.apache.commons.configuration.ConfigurationException;
 import org.junit.Test;
-import com.github.aynu.yukar.framework.core.StandardRuntimeException;
+import com.github.aynu.yukar.framework.lang.StandardRuntimeException;
 import com.github.aynu.yukar.framework.util.PropertiesHelper;
 /**
  * @see PropertiesHelper
