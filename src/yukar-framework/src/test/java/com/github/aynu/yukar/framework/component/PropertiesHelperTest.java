@@ -9,8 +9,6 @@ import static org.junit.Assert.*;
 import java.awt.Dimension;
 import org.apache.commons.configuration.ConfigurationException;
 import org.junit.Test;
-import com.github.aynu.yukar.framework.component.PropertiesHelper;
-import com.github.aynu.yukar.framework.component.StandardRuntimeException;
 /**
  * @see PropertiesHelper
  * @author nilcy
@@ -40,7 +38,7 @@ public class PropertiesHelperTest {
     public final void testVariable() throws ConfigurationException {
         final PropertiesHelper testee = new PropertiesHelper("application");
         assertThat(testee, is(not(nullValue())));
-        assertThat(testee.getText("application.title"), is("Kuzumeji Framework 0.1.0-SNAPSHOT"));
+        assertThat(testee.getText("application.title"), is("Yukar Framework 0.0.1-SNAPSHOT"));
         assertArrayEquals(testee.getTexts("vars"), new Object[] { "foo", "bar", "baz" });
         testee.save();
         testee.setProperty("vars", "fuga,hoge");
