@@ -32,31 +32,21 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-api</artifactId>
-				<version>7.0</version>
-			</dependency>
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-web-api</artifactId>
-				<version>7.0</version>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.persistence</groupId>
-				<artifactId>eclipselink</artifactId>
-				<version>2.5.1</version>
-			</dependency>
-			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache-jcache</artifactId>
-				<version>1.5.0-0.5</version>
-			</dependency>
-			<dependency>
-				<groupId>org.glassfish</groupId>
-				<artifactId>javax.el</artifactId>
-				<version>3.0.0</version>
-			</dependency>
+			<!-- <dependency> -->
+			<!-- <groupId>javax</groupId> -->
+			<!-- <artifactId>javaee-api</artifactId> -->
+			<!-- <version>7.0</version> -->
+			<!-- </dependency> -->
+			<!-- <dependency> -->
+			<!-- <groupId>javax</groupId> -->
+			<!-- <artifactId>javaee-web-api</artifactId> -->
+			<!-- <version>7.0</version> -->
+			<!-- </dependency> -->
+			<!-- <dependency> -->
+			<!-- <groupId>org.eclipse.persistence</groupId> -->
+			<!-- <artifactId>eclipselink</artifactId> -->
+			<!-- <version>2.5.1</version> -->
+			<!-- </dependency> -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
@@ -98,6 +88,11 @@
 				<version>1.7.7</version>
 			</dependency>
 			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-jcache</artifactId>
+				<version>1.5.0-0.5</version>
+			</dependency>
+			<dependency>
 				<groupId>com.googlecode.jmockit</groupId>
 				<artifactId>jmockit</artifactId>
 				<version>1.7</version>
@@ -113,6 +108,13 @@
 				<version>1.3</version>
 			</dependency>
 			<dependency>
+				<groupId>org.wildfly.bom</groupId>
+				<artifactId>jboss-javaee-7.0-with-all</artifactId>
+				<version>8.1.0.Final</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
 				<groupId>org.jboss.arquillian</groupId>
 				<artifactId>arquillian-bom</artifactId>
 				<version>1.1.5.Final</version>
@@ -126,36 +128,18 @@
 			</dependency>
 			<dependency>
 				<groupId>org.wildfly</groupId>
-				<artifactId>wildfly-arquillian-container-remote</artifactId>
+				<artifactId>wildfly-arquillian-container-managed</artifactId>
 				<version>8.1.0.Final</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.arquillian.container</groupId>
-				<artifactId>arquillian-glassfish-embedded-3.1</artifactId>
-				<version>1.0.0.CR4</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.arquillian.container</groupId>
-				<artifactId>arquillian-glassfish-remote-3.1</artifactId>
-				<version>1.0.0.CR4</version>
-			</dependency>
-			<dependency>
-				<groupId>org.glassfish.main.extras</groupId>
-				<artifactId>glassfish-embedded-all</artifactId>
-				<version>4.0</version>
+				<groupId>org.wildfly</groupId>
+				<artifactId>wildfly-arquillian-container-remote</artifactId>
+				<version>8.1.0.Final</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.derby</groupId>
 				<artifactId>derby</artifactId>
 				<version>10.10.1.1</version>
-			</dependency>
-			<!-- TODO Glassfish4 PATCHES(JAX-RS/Jersey) -->
-			<dependency>
-				<groupId>org.glassfish.jersey</groupId>
-				<artifactId>jersey-bom</artifactId>
-				<version>2.0-rc1</version>
-				<type>pom</type>
-				<scope>import</scope>
 			</dependency>
 			<!-- Aynu Project -->
 			<dependency>
@@ -163,31 +147,19 @@
 				<artifactId>yukar-testing</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
+			<dependency>
+				<groupId>com.github.aynu</groupId>
+				<artifactId>yukar-framework</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<repositories>
 		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>http://repo.maven.apache.org/maven2</url>
+			<id>JBoss Repository</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<releases>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>http://repo.maven.apache.org/maven2</url>
-		</pluginRepository>
-	</pluginRepositories>
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>

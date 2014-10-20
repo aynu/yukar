@@ -24,25 +24,26 @@
 			<groupId>org.jboss.arquillian.junit</groupId>
 			<artifactId>arquillian-junit-container</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.protocol</groupId>
+            <artifactId>arquillian-protocol-servlet</artifactId>
+            <scope>test</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.jboss.arquillian.extension</groupId>
 			<artifactId>arquillian-transaction-jta</artifactId>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.wildfly</groupId> -->
+		<!-- <artifactId>wildfly-arquillian-container-managed</artifactId> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.wildfly</groupId>
 			<artifactId>wildfly-arquillian-container-remote</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.jboss.arquillian.container</groupId> -->
-		<!-- <artifactId>arquillian-glassfish-remote-3.1</artifactId> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>com.googlecode.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey</groupId>
-			<artifactId>jax-rs-ri</artifactId>
 		</dependency>
 	</dependencies>
 </project>

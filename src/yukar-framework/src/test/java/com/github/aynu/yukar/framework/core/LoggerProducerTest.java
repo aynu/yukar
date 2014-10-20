@@ -9,9 +9,9 @@ import static org.junit.Assert.*;
 import javax.inject.Inject;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -24,15 +24,20 @@ public class LoggerProducerTest {
     /** ロガー */
     @Inject
     private Logger testee;
+    // static {
+    // Security.addProvider(new JBossSaslProvider());
+    // }
     /**
      * デプロイ
      * @return JAR
      */
     @Deployment
-    public static JavaArchive deploy() {
-        return ShrinkWrap.create(JavaArchive.class)
-            .addPackages(true, "com.github.aynu.yukar.framework.core")
-            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    // (name = "main-server-group")
+    // @TargetsContainer("wildfly-remote")
+    public static Archive<?> deploy() {
+        return ShrinkWrap.create(WebArchive.class).addClass(LoggerProducer.class);
+        // .addPackages(true, "com.github.aynu.yukar.framework.core")
+        // .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
     /**
      * @see Logger#trace(String, Object...)
