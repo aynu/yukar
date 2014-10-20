@@ -11,6 +11,7 @@ import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,12 +33,10 @@ public class LoggerProducerTest {
      * @return JAR
      */
     @Deployment
-    // (name = "main-server-group")
-    // @TargetsContainer("wildfly-remote")
     public static Archive<?> deploy() {
-        return ShrinkWrap.create(WebArchive.class).addClass(LoggerProducer.class);
-        // .addPackages(true, "com.github.aynu.yukar.framework.core")
-        // .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+        return ShrinkWrap.create(WebArchive.class)
+            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
+            .addPackages(true, "com.github.aynu.yukar.framework.core");
     }
     /**
      * @see Logger#trace(String, Object...)

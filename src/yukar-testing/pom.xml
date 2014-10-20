@@ -24,15 +24,15 @@
 			<groupId>org.jboss.arquillian.junit</groupId>
 			<artifactId>arquillian-junit-container</artifactId>
 		</dependency>
-        <dependency>
-            <groupId>org.jboss.arquillian.protocol</groupId>
-            <artifactId>arquillian-protocol-servlet</artifactId>
-            <scope>test</scope>
-        </dependency>
 		<dependency>
-			<groupId>org.jboss.arquillian.extension</groupId>
-			<artifactId>arquillian-transaction-jta</artifactId>
+			<groupId>org.jboss.arquillian.protocol</groupId>
+			<artifactId>arquillian-protocol-servlet</artifactId>
+			<scope>test</scope>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.jboss.arquillian.extension</groupId> -->
+		<!-- <artifactId>arquillian-transaction-jta</artifactId> -->
+		<!-- </dependency> -->
 		<!-- <dependency> -->
 		<!-- <groupId>org.wildfly</groupId> -->
 		<!-- <artifactId>wildfly-arquillian-container-managed</artifactId> -->
