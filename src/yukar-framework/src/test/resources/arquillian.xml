@@ -18,7 +18,8 @@
 			<property name="password">happyhacking</property>
 		</configuration>
 	</container>
-	<!-- <extension qualifier="persistence-dbunit"> -->
-	<!-- <property name="defaultDataSetFormat">YAML</property> -->
-	<!-- </extension> -->
+	<extension qualifier="persistence">
+		<property name="defaultDataSource">java:jboss/datasources/ExampleDS</property>
+		<!-- <property name="defaultDataSetFormat">XLS</property> -->
+	</extension>
 </arquillian>

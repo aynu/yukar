@@ -24,15 +24,14 @@
 			<groupId>org.jboss.arquillian.junit</groupId>
 			<artifactId>arquillian-junit-container</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.jboss.arquillian.protocol</groupId>
-			<artifactId>arquillian-protocol-servlet</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<!-- <dependency> -->
-		<!-- <groupId>org.jboss.arquillian.extension</groupId> -->
-		<!-- <artifactId>arquillian-transaction-jta</artifactId> -->
+		<!-- <groupId>org.jboss.arquillian.protocol</groupId> -->
+		<!-- <artifactId>arquillian-protocol-servlet</artifactId> -->
 		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.jboss.arquillian.extension</groupId>
+			<artifactId>arquillian-transaction-jta</artifactId>
+		</dependency>
 		<!-- <dependency> -->
 		<!-- <groupId>org.wildfly</groupId> -->
 		<!-- <artifactId>wildfly-arquillian-container-managed</artifactId> -->
@@ -41,6 +40,15 @@
 			<groupId>org.wildfly</groupId>
 			<artifactId>wildfly-arquillian-container-remote</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.jboss.shrinkwrap.resolver</groupId>
+			<artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.jboss.shrinkwrap.resolver</groupId> -->
+		<!-- <artifactId>shrinkwrap-resolver-api-maven</artifactId> -->
+		<!-- <version>2.2.0-beta-1</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>com.googlecode.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
