@@ -59,14 +59,14 @@ public class MailServiceImplTest {
             .addAsResource("config.properties")
             .addAsLibraries(
                 Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
-                    .withTransitivity().asFile());
+                .withTransitivity().asFile());
     }
     /** テスト前処理 */
     @Before
     public void before() {
         assertThat(testee, is(not(nullValue())));
         try {
-            originator = testee.createAddress("yukar-support@gmail.com", "Yukar-Support");
+            originator = testee.createAddress("yukar.aynu@gmail.com", "Yukar Aynu");
             recipients = new LinkedHashMap<>();
             recipients.put(RecipientType.TO, testee.createAddress("shimokawa@mamezou.com", "下川岳洋"));
             recipients.put(RecipientType.CC, testee.createAddress("takehiro.shimokawa@gmail.com"));
@@ -94,7 +94,7 @@ public class MailServiceImplTest {
      */
     @Test
     public void testMultipart() throws EnterpriseException, MessagingException,
-        UnsupportedEncodingException {
+    UnsupportedEncodingException {
         final Multipart part = new MimeMultipart();
         final MimeBodyPart body = new MimeBodyPart();
         body.setText("添付ファイルを確認お願いします。", "ISO-2022-JP");
