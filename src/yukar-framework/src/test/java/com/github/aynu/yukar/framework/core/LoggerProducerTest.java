@@ -12,7 +12,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -34,9 +34,9 @@ public class LoggerProducerTest {
      */
     @Deployment
     public static Archive<?> deploy() {
-        return ShrinkWrap.create(WebArchive.class)
+        return ShrinkWrap.create(JavaArchive.class)
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addPackages(true, "com.github.aynu.yukar.framework.core");
+            .addPackages(true, "com.github.aynu.yukar");
     }
     /**
      * @see Logger#trace(String, Object...)
