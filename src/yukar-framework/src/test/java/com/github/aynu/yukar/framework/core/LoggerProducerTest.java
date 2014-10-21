@@ -25,18 +25,14 @@ public class LoggerProducerTest {
     /** ロガー */
     @Inject
     private Logger testee;
-    // static {
-    // Security.addProvider(new JBossSaslProvider());
-    // }
     /**
      * デプロイ
      * @return JAR
      */
     @Deployment
     public static Archive<?> deploy() {
-        return ShrinkWrap.create(JavaArchive.class)
-            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addPackages(true, "com.github.aynu.yukar");
+        return ShrinkWrap.create(JavaArchive.class).addPackages(true, "com.github.aynu.yukar")
+            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
     /**
      * @see Logger#trace(String, Object...)
