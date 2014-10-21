@@ -33,7 +33,7 @@ public class TesteeTest {
     private EntityManager manager;
     /**
      * デプロイ
-     * @return JAR
+     * @return WAR
      */
     @Deployment
     public static Archive<?> deploy() {
@@ -44,7 +44,7 @@ public class TesteeTest {
             .addAsManifestResource("persistence.xml", "META-INF/persistence.xml")
             .addAsLibraries(
                 Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
-                .withTransitivity().asFile());
+                    .withTransitivity().asFile());
     }
     /**
      * @see EntityManager#persist(Object)

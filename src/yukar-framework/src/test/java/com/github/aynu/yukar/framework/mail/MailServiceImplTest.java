@@ -48,7 +48,7 @@ public class MailServiceImplTest {
     private Map<RecipientType, InternetAddress> recipients;
     /**
      * デプロイ
-     * @return JAR
+     * @return WAR
      */
     @Deployment
     public static Archive<?> deploy() {
@@ -59,7 +59,7 @@ public class MailServiceImplTest {
             .addAsResource("config.properties")
             .addAsLibraries(
                 Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
-                .withTransitivity().asFile());
+                    .withTransitivity().asFile());
     }
     /** テスト前処理 */
     @Before
@@ -94,7 +94,7 @@ public class MailServiceImplTest {
      */
     @Test
     public void testMultipart() throws EnterpriseException, MessagingException,
-    UnsupportedEncodingException {
+        UnsupportedEncodingException {
         final Multipart part = new MimeMultipart();
         final MimeBodyPart body = new MimeBodyPart();
         body.setText("添付ファイルを確認お願いします。", "ISO-2022-JP");
