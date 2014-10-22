@@ -7,6 +7,7 @@ package com.github.aynu.yukar.baseline.service;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
+import com.github.aynu.yukar.baseline.registry.Hello;
 import com.github.aynu.yukar.testing.CoverageHelper;
 /**
  * @see Hello
