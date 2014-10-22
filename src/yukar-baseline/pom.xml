@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-        <artifactId>yukar-root</artifactId>
-        <groupId>com.github.aynu</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-  <artifactId>yukar-baseline</artifactId>
-  <packaging>pom</packaging>
-  <name>Yukar Baseline</name>
-  <description>Yukar Baseline Module</description>
-  <modules>
-    <module>yukar-baseline-registry</module>
-    <module>yukar-baseline-provider</module>
-    <module>yukar-baseline-consumer</module>
-    <module>yukar-baseline-bep</module>
-    <module>yukar-baseline-fep</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>yukar-root</artifactId>
+		<groupId>com.github.aynu</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>yukar-baseline</artifactId>
+	<packaging>pom</packaging>
+	<name>Yukar Baseline</name>
+	<description>Yukar Baseline Module</description>
+	<modules>
+		<module>yukar-baseline-registry</module>
+		<module>yukar-baseline-provider</module>
+		<module>yukar-baseline-consumer</module>
+		<module>yukar-baseline-bep</module>
+		<module>yukar-baseline-fep</module>
+	</modules>
 </project>

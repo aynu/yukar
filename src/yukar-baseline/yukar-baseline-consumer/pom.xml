@@ -9,6 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>yukar-baseline-consumer</artifactId>
+	<packaging>war</packaging>
 	<name>Yukar Baseline Consumer</name>
 	<description>Yukar Baseline Consumer Module</description>
 	<dependencies>
@@ -21,6 +22,10 @@
 			<artifactId>yukar-testing</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.github.aynu</groupId>
+			<artifactId>yukar-baseline-registry</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
-	<packaging>war</packaging>
 </project>
