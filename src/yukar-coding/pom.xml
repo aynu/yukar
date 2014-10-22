@@ -6,8 +6,8 @@
 	<groupId>com.github.aynu</groupId>
 	<artifactId>yukar-coding</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>yukar-coding</name>
-	<description>Yukar Coding</description>
+	<name>Yukar Coding</name>
+	<description>Yukar Coding Module</description>
 	<url>https://github.com/aynu/yukar</url>
 	<organization>
 		<name>Aynu</name>

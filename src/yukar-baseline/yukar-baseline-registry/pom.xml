@@ -9,8 +9,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>yukar-baseline-registry</artifactId>
-	<name>yukar-baseline-registry</name>
-	<url>http://maven.apache.org</url>
+	<name>Yukar Baseline Registry</name>
+	<description>Yukar Baseline Registry Module</description>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.aynu</groupId>

@@ -8,8 +8,13 @@
     </parent>
   <artifactId>yukar-baseline</artifactId>
   <packaging>pom</packaging>
-  <name>yukar-baseline</name>
+  <name>Yukar Baseline</name>
+  <description>Yukar Baseline Module</description>
   <modules>
     <module>yukar-baseline-registry</module>
+    <module>yukar-baseline-provider</module>
+    <module>yukar-baseline-consumer</module>
+    <module>yukar-baseline-bep</module>
+    <module>yukar-baseline-fep</module>
   </modules>
 </project>

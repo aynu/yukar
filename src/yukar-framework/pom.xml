@@ -9,6 +9,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>yukar-framework</artifactId>
+	<name>Yukar Framework</name>
+	<description>Yukar Framework Module</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>

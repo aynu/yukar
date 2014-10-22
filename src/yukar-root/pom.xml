@@ -6,8 +6,8 @@
 	<artifactId>yukar-root</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>yukar-root</name>
-	<description>Yukar Root</description>
+	<name>Yukar Root</name>
+	<description>Yukar Root Module</description>
 	<url>https://github.com/aynu/yukar</url>
 	<organization>
 		<name>Aynu</name>
