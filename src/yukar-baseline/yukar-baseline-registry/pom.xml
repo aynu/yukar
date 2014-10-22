@@ -21,5 +21,11 @@
 			<artifactId>yukar-testing</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://github.com/wildfly/wildfly/blob/master/spec-api/pom.xml -->
+		<dependency>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.2_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 </project>
