@@ -4,11 +4,11 @@
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
 /**
- * ベースライン | サービス
+ * ベースライン | コンシューマ
  * <dl>
  * <dt>使用条件
- * <dd>ベースラインのサービスとして使用すること。
+ * <dd>ベースラインのコンシューマとして使用すること。
  * </dl>
  * @author nilcy
  */
-package com.github.aynu.yukar.baseline.service;
+package com.github.aynu.yukar.baseline.consumer;
