@@ -8,13 +8,16 @@ import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import com.github.aynu.yukar.framework.lang.AbstractDataObject;
 /**
  * 設定
  * @author nilcy
  */
 @Entity
 @Table(name = "config")
-public class Config {
+public class Config extends AbstractDataObject<Config> {
+    /** 識別番号 */
+    private static final long serialVersionUID = 849036803868611064L;
     /** 設定ID */
     @EmbeddedId
     private ConfigId id;

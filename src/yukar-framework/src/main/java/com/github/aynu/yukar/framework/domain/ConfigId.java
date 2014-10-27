@@ -6,12 +6,15 @@
 package com.github.aynu.yukar.framework.domain;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import com.github.aynu.yukar.framework.lang.AbstractDataObject;
 /**
  * 設定ID
  * @author nilcy
  */
 @Embeddable
-public class ConfigId {
+public class ConfigId extends AbstractDataObject<ConfigId> {
+    /** 識別番号 */
+    private static final long serialVersionUID = 211168598705921777L;
     /** 設定名 */
     @Column(name = "config_name", nullable = false)
     private String name;
