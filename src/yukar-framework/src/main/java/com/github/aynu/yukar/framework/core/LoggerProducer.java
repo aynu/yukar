@@ -4,7 +4,7 @@
 // http://www.gnu.org/licenses/gpl-3.0-standalone.html
 // ----------------------------------------------------------------------------
 package com.github.aynu.yukar.framework.core;
-import javax.enterprise.inject.Default;
+import javax.enterprise.context.Dependent;
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 import org.slf4j.Logger;
@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
  * </dl>
  * @author nilcy
  */
+@Dependent
 @SuppressWarnings("static-method")
 public class LoggerProducer {
     /** コンストラクタ */
@@ -28,7 +29,7 @@ public class LoggerProducer {
      * @return ロガー
      */
     @Produces
-    @Default
+    // @Default
     public Logger createLogger(final InjectionPoint point) {
         return LoggerFactory.getLogger(point.getMember().getDeclaringClass());
     }
