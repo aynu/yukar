@@ -33,10 +33,10 @@ public class WatchdogTimerService {
     /** 初期処理 */
     @PostConstruct
     public void init() {
-        programaticService.setTimer(30000);
+        programaticService.setTimer(600000);
     }
     /** タイムアウト処理 */
-    @Schedule(minute = "*/1", hour = "*")
+    @Schedule(hour = "*", minute = "*/10")
     public void timeout() {
         log.info("監視)自動タイマーサービス最終実行日時 : {}", automaticService.getLastTimeout());
         log.info("監視)手動タイマーサービス最終実行日時 : {}", programaticService.getLastTimeout());

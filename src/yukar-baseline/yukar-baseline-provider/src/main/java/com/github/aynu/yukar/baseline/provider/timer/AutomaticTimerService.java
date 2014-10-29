@@ -24,7 +24,7 @@ public class AutomaticTimerService extends AbstractTimerService {
     /**
      * タイムアウト処理
      */
-    @Schedule(minute = "*/1", hour = "*")
+    @Schedule(hour = "*", minute = "*/10")
     public void timeout() {
         setLastTimeout(new Date());
         log.info("自動タイマーサービスが終了しました。");
