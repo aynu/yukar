@@ -56,10 +56,11 @@ public class MailServiceImplTest {
             .create(WebArchive.class)
             .addPackages(true, "com.github.aynu.yukar")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+            .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
             .addAsResource("config.properties")
             .addAsLibraries(
                 Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
-                    .withTransitivity().asFile());
+                .withTransitivity().asFile());
     }
     /** テスト前処理 */
     @Before
@@ -94,7 +95,7 @@ public class MailServiceImplTest {
      */
     @Test
     public void testMultipart() throws EnterpriseException, MessagingException,
-        UnsupportedEncodingException {
+    UnsupportedEncodingException {
         final Multipart part = new MimeMultipart();
         final MimeBodyPart body = new MimeBodyPart();
         body.setText("添付ファイルを確認お願いします。", "ISO-2022-JP");

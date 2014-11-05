@@ -9,7 +9,6 @@ import static org.junit.Assert.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import org.junit.Test;
-import com.github.aynu.yukar.framework.lang.StandardException;
 /**
  * @see StandardException
  * @author nilcy
@@ -44,14 +43,14 @@ public class StandardExceptionTest {
             assertThat(e.getApplicationMessage(), is("testee"));
         }
         try {
-            throw new StandardException("Country_UK_code", "81");
+            throw new StandardException("Country.UK_code", "81");
         } catch (final StandardException e) {
             assertThat(e.getApplicationMessage(), is("一意キー制約の違反です。国[国コード=81]"));
         }
         try {
             final Map<String, Object[]> messageMap = new LinkedHashMap<>();
-            messageMap.put("Country_UK_code", new Object[] { "81" });
-            messageMap.put("Country_UK_name", new Object[] { "Japan" });
+            messageMap.put("Country.UK_code", new Object[] { "81" });
+            messageMap.put("Country.UK_name", new Object[] { "Japan" });
             throw new StandardException(messageMap);
         } catch (final StandardException e) {
             assertThat(e.getApplicationMessage(),

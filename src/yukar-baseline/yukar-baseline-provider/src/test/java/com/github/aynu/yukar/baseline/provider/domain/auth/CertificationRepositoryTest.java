@@ -42,7 +42,7 @@ public class CertificationRepositoryTest {
             .create(WebArchive.class)
             .addPackages(true, "com.github.aynu.yukar")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsManifestResource("persistence.xml", "META-INF/persistence.xml")
+            .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
             .addAsResource("config.properties")
             .addAsResource("error-messages.properties")
             .addAsLibraries(

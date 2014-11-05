@@ -41,10 +41,10 @@ public class TesteeTest {
             .create(WebArchive.class)
             .addPackages(true, "com.github.aynu.yukar")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsManifestResource("persistence.xml", "META-INF/persistence.xml")
+            .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
             .addAsLibraries(
                 Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
-                    .withTransitivity().asFile());
+                .withTransitivity().asFile());
     }
     /**
      * @see EntityManager#persist(Object)

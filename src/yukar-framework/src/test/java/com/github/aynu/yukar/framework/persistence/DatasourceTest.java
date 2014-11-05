@@ -19,7 +19,6 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
-import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -36,15 +35,13 @@ public class DatasourceTest {
     private Logger log;
     @Deployment
     public static Archive<?> deploy() {
-        return ShrinkWrap
-            .create(WebArchive.class)
-            .addPackages(true, "com.github.aynu.yukar")
+        return ShrinkWrap.create(WebArchive.class).addPackages(true, "com.github.aynu.yukar")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsManifestResource("persistence.xml", "META-INF/persistence.xml")
-            .addAsResource("config.properties")
-            .addAsLibraries(
-                Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
-                    .withTransitivity().asFile());
+            .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
+            .addAsResource("config.properties");
+        // .addAsLibraries(
+        // Maven.resolver().loadPomFromFile("pom.xml").importRuntimeDependencies().resolve()
+        // .withTransitivity().asFile());
     }
     @Test
     public final void test() throws NamingException, SQLException {
